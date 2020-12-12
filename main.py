@@ -4,18 +4,21 @@ Info
 """
 
 
+from gpiozero import LED, Button
+
+
 __author__ = "Jens Vansteenvoort"
 __email__ = "jens.vansteenvoort@student.kdg.be"
 __status__ = "Development"
 
 
-from gpiozero import LED
-from time import sleep
+led1 = LED(17)
+led2 = LED(22)
+button = Button(18)
 
-led = LED(17)
+def toggle_led():
+    if button.is_pressed():
+        led1.toggle()
 
-while True:
-    led.on()
-    sleep(1)
-    led.off()
-    sleep(1)
+if __name__== '__main__':
+    toggle_led()
