@@ -5,7 +5,7 @@ Info 1 druknop die 2 led's bediend
 
 
 from gpiozero import LED, Button
-from time import  sleep
+
 
 __author__ = "Jens Vansteenvoort"
 __email__ = "jens.vansteenvoort@student.kdg.be"
@@ -18,9 +18,9 @@ button1 = Button(18)
 
 try:
     led1.source = button1.value
-    pause()
+  #  pause()
 finally:
     pass
 
 if __name__== '__main__':
-    toggle_led()
+    ()
