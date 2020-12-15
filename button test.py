@@ -3,7 +3,7 @@
 Info 1 druknop die 2 led's bediend
 """
 
-
+from signal import pause
 from gpiozero import LED, Button
 
 
@@ -18,7 +18,7 @@ button1 = Button(18)
 
 try:
     led1.source = button1.value
-  #  pause()
+    pause()
 finally:
     pass
 
