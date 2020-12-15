@@ -18,6 +18,8 @@ led2 = LED(22)
 button1 = Button(18)
 
 
+blink_on = False
+
 def go_blink():
     global blink_on
 
@@ -33,7 +35,6 @@ def go_blink():
 
 try:
     button1.when_pressed = go_blink
-
     pause()
 finally:
     pass
