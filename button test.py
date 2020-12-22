@@ -34,7 +34,7 @@ def go_blink():
     blink_on = not blink_on
 
 try:
-    button1.when_pressed = go_blink
+    button1.when_pressed = go_blink, print("button1 pressed")
     pause()
 finally:
     pass
