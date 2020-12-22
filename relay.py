@@ -4,7 +4,7 @@ Info: tesing how a relay functions in gpiozore
 """
 
 
-import time
+from signal import pause
 import gpiozero
 from gpiozero import Button
 
@@ -39,6 +39,7 @@ def toggle_relay():
 
 try:
     button1.when_pressed = toggle_relay()
+    pause()
 finally:
     pass
 
