@@ -29,7 +29,7 @@ def go_blink():
     else:
         led1.blink(0.5, 0.5)
         sleep(0.5)
-        led2.blink(0.5, 0,5)
+        led2.blink(0.5, 0.5)
 
     blink_on = not blink_on
 
