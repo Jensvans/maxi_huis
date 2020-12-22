@@ -5,8 +5,8 @@ Info: tesing how a relay functions in gpiozore
 
 
 from signal import pause
-import gpiozero
-from gpiozero import Button
+from time import sleep
+from gpiozero import Button, OutputDevice
 
 
 __author__ = "Jens Vansteenvoort"
@@ -14,34 +14,20 @@ __email__ = "jens.vansteenvoort@student.kdg.be"
 __status__ = "Development"
 
 
-button1 = Button(18)
-relay_pin1 = 23
-relay_pin2 = 24
-relay1 = gpiozero.OutputDevice(relay_pin1, active_high=False, initial_value=False)
-relay2 = gpiozero.OutputDevice(relay_pin2, active_high=False, initial_value=False)
+button1_pin = 18
+relay1_pin = 23
 
+button1 = Button(button1_pin)
+relay1 = OutputDevice(relay1_pin)
 
-toggle_on = False
+def ButtonPressedCallback():
+    relay1.on()
+    sleep(0.5)
+    relay1.off()
 
+button1.when_pressed = ButtonPressedCallback
 
-def toggle_relay():
-    global toggle_on
-
-    if toggle_on:
-        print("Setting relay ON")
-        relay1.on()
-        relay2.on()
-
-    else:
-        print("Setting relay OFF")
-        relay1.off()
-        relay2.off()
-
-try:
-    button1.when_pressed = toggle_relay()
-    pause()
-finally:
-    pass
+pause()
 
 if __name__ == "__main__":
     ()
