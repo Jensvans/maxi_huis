@@ -5,7 +5,7 @@ Info 1 druknop die 2 led's bediend
 
 from signal import pause
 from time import sleep
-from gpiozero import LED, Button
+from gpiozero import LED, Button, OutputDevice
 
 
 __author__ = "Jens Vansteenvoort"
