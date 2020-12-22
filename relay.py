@@ -20,10 +20,20 @@ relay1_pin = 23
 button1 = Button(button1_pin)
 relay1 = OutputDevice(relay1_pin)
 
+
+ButtonPressed = False
+
 def ButtonPressedCallback():
-    relay1.on()
-    sleep(0.5)
-    relay1.off()
+    global ButtonPressed
+
+    if ButtonPressed:
+        relay1.off()
+
+    else:
+        relay1.on()
+
+    ButtonPressed = not ButtonPressed
+
 
 button1.when_pressed = ButtonPressedCallback
 
