@@ -35,7 +35,7 @@ def go_blink():
 
 try:
     button1.when_pressed = go_blink
-    print("button1 pressed")
+    button1.when_pressed = print("button1 pressed")
     pause()
 finally:
     pass
