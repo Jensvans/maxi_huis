@@ -16,10 +16,11 @@ __status__ = "Development"
 
 button1_pin = 18
 relay1_pin = 23
+relay2_pin = 24
 
 button1 = Button(button1_pin)
 relay1 = OutputDevice(relay1_pin)
-
+relay2 = OutputDevice(relay2_pin)
 
 ButtonPressed = False
 
