@@ -43,12 +43,12 @@ def toggle_relay2():
         relay2Button.text = "RELAY ON"
 
 
-app = App('First Gui', height=600, width=800)
+app = App('Maxi Huis', height=600, width=800)
 
-relay1Button = PushButton(app, toggle_relay1, text="RELAY ON", width=15, height=3)
+relay1Button = PushButton(app, toggle_relay1, text="RELAY1 ON", width=15, height=3)
 relay1Button.text_size = 36
 
-relay2Button = PushButton(app, toggle_relay1, text="RELAY ON", width=15, height=3)
+relay2Button = PushButton(app, toggle_relay2, text="RELAY2 ON", width=15, height=3)
 relay2Button.text_size = 36
 
 exitButton = PushButton(app, exitApp, text="Exit", align="bottom", width=15, height=3)
