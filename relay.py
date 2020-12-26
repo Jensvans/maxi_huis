@@ -15,6 +15,7 @@ __status__ = "Development"
 
 
 button1_pin = 18
+button2_pin = 19
 relay1_pin = 23
 relay2_pin = 24
 
