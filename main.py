@@ -4,7 +4,8 @@ Info: tesing how a relay functions in gpiozore
 """
 
 
-from signal import pause
+from gpiozero.pins.pigpio import PiGPIOFactory
+#from signal import pause
 from guizero import App, PushButton
 from gpiozero import OutputDevice
 import sys
@@ -22,6 +23,8 @@ relay2_pin = 22
 relay1 = OutputDevice(relay1_pin)
 relay2 = OutputDevice(relay2_pin)
 
+
+IP = PiGPIOFactory(host='192.168.1.52')
 
 def exitApp():
     sys.exit()
@@ -57,7 +60,7 @@ exitButton.text_size = 36
 app.display()
 
 
-pause()
+#pause()
 
 if __name__ == "__main__":
     ()
