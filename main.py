@@ -5,7 +5,7 @@ Info: tesing how a relay functions in gpiozore
 
 
 from gpiozero.pins.pigpio import PiGPIOFactory
-#from signal import pause
+from signal import pause
 from guizero import App, PushButton
 from gpiozero import OutputDevice
 import sys
@@ -60,7 +60,7 @@ exitButton.text_size = 36
 app.display()
 
 
-#pause()
+pause()
 
 if __name__ == "__main__":
     ()
