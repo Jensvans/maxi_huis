@@ -24,7 +24,7 @@ relay1 = OutputDevice(relay1_pin)
 relay2 = OutputDevice(relay2_pin)
 
 
-IP = PiGPIOFactory(host='192.168.1.52')
+#IP = PiGPIOFactory(host='192.168.1.52')
 
 def exitApp():
     sys.exit()
