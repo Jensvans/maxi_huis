@@ -18,8 +18,6 @@ __status__ = "Development"
 relay1_pin = 17
 relay2_pin = 22
 IP = PiGPIOFactory(host='192.168.0.242')
-
-
 relay1 = OutputDevice(relay1_pin, pin_factory=IP)
 relay2 = OutputDevice(relay2_pin, pin_factory=IP)
 
