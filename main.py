@@ -21,11 +21,11 @@ IP = PiGPIOFactory(host='192.168.0.242')
 relay1 = OutputDevice(relay1_pin, pin_factory=IP)
 relay2 = OutputDevice(relay2_pin, pin_factory=IP)
 
-
+#code to close program
 def exitApp():
-    sys.exit()  #code to close program
+    sys.exit()
 
-
+#code to toggle relay1
 def toggle_relay1():
     relay1.toggle()
     if relay1.is_lit:
@@ -33,7 +33,7 @@ def toggle_relay1():
     else:
         relay1Button.text = "RELAY ON"
 
-
+#code to toggle relay2
 def toggle_relay2():
     relay2.toggle()
     if relay2.is_lit:
