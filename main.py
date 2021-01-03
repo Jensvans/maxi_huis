@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 """
-Info: tesing how a relay functions in gpiozore
+A house installation of a raspberry pi that controls 2 relays
 """
 
 
