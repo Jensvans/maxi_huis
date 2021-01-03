@@ -23,7 +23,7 @@ relay2 = OutputDevice(relay2_pin, pin_factory=IP)
 
 
 def exitApp():
-    sys.exit()
+    sys.exit()  #code to close program
 
 
 def toggle_relay1():
@@ -41,15 +41,18 @@ def toggle_relay2():
     else:
         relay2Button.text = "RELAY ON"
 
-
+#code for the size of the screen
 app = App('Maxi Huis', height=600, width=800)
 
+#code for the virtual button of the first relay
 relay1Button = PushButton(app, toggle_relay1, text="RELAY1 ON", width=15, height=3)
 relay1Button.text_size = 36
 
+#code for the virtual button of the second relay
 relay2Button = PushButton(app, toggle_relay2, text="RELAY2 ON", width=15, height=3)
 relay2Button.text_size = 36
 
+#code for the virtual exit button
 exitButton = PushButton(app, exitApp, text="Exit", align="bottom", width=15, height=3)
 exitButton.text_size = 36
 
