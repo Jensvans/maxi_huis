@@ -8,6 +8,8 @@ from gpiozero.pins.pigpio import PiGPIOFactory
 from guizero import App, PushButton
 from gpiozero import OutputDevice
 import sys
+import multiprocessing
+import time
 
 
 __author__ = "Jens Vansteenvoort"
@@ -58,6 +60,6 @@ exitButton.text_size = 36
 
 app.display()
 
-
+#code to execute if called from command-line
 if __name__ == "__main__":
     ()
