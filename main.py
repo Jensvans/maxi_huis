@@ -8,8 +8,6 @@ from gpiozero.pins.pigpio import PiGPIOFactory
 from guizero import App, PushButton
 from gpiozero import OutputDevice
 import sys
-import multiprocessing
-import time
 
 
 __author__ = "Jens Vansteenvoort"
